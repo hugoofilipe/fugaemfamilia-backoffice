@@ -19,13 +19,10 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Deploy dist folder to separate branch
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git clone --branch dist-branch https://github.com/${{ github.repository }} dist-branch
-        rsync -av --delete dist/ dist-branch/
-        cd dist-branch
-        git add .
-        git commit -m "Update dist folder"
-        git push origin dist-branch
+    - name: Commit and push dist folder
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        branch: prod_main  # Change this to your target branch
+        force: true
+        directory: dist
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
