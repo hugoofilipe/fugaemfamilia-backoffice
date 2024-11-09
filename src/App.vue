@@ -1,26 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div class="menu">
+            <button @click="toggleLanguage">{{ language }}</button>
+            <router-link to="/" class="menu-link"><h1>Reservas</h1></router-link>
+            <router-link to="/form" class="menu-link"><h1>Formulário</h1></router-link>
+            <router-link to="/ads" class="menu-link"><h1>Anúncios</h1></router-link>
+        </div>
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, provide } from 'vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  setup() {
+    const language = ref('pt');
+
+    const toggleLanguage = () => {
+      language.value = language.value === 'pt' ? 'en' : 'pt';
+    };
+
+    provide('language', language);
+
+    return {
+      language,
+      toggleLanguage,
+    };
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+h1 {
+    text-align: center;
+    color: #333;
 }
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
 </style>
