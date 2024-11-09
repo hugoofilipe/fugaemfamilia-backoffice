@@ -22,7 +22,7 @@ jobs:
     - name: Commit and push dist folder
       uses: ad-m/github-push-action@v0.6.0
       with:
-        branch: gh-pages  # Change this to your target branch
+        branch: prod_main  # Change this to your target branch
         force: true
         directory: dist
       env:
