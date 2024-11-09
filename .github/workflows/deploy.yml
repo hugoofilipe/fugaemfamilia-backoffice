@@ -19,10 +19,15 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Commit and push dist folder
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        branch: prod_main  # Change this to your target branch
-        force: true
-        directory: dist
+    - name: Deploy dist folder to prod_main branch
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git clone --branch prod_main https://github.com/${{ github.repository }} prod_main
+        rsync -av --delete dist/ prod_main/
+        cd prod_main
+        git add .
+        git commit -m "Update dist folder"
+        git push origin prod_main
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
