@@ -25,5 +25,4 @@ jobs:
         branch: prod_main  # Change this to your target branch
         force: true
         directory: dist
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
