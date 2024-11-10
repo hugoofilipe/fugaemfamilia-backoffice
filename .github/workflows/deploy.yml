@@ -25,12 +25,10 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git clone --branch prod_main https://github.com/${{ github.repository }} prod_main
-        rsync -av --delete dist/ prod_main/
         cd prod_main
-        find . -maxdepth 1 ! -name '.git' -exec rm -rf {} \;
-        mv ../dist/* .
-        rm -rf ../dist
+        git rm -rf .
+        cp -r ../dist/* .
         git add .
         git commit -m "Update dist folder"
-        git push origin prod_main
+        git push --force origin prod_main
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
