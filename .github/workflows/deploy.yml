@@ -1,29 +1,19 @@
-name: Deploy
+name: Push dist
 
 on:
   push:
     branches:
-      - master  # Change this to your deployment branch
+      - main
+      - master
 
 jobs:
-  build:
+  push-dist:
+    name: Push dist
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build project
-      run: npm run build
-
-    - name: Commit and push dist folder
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        branch: prod_main  # Change this to your target branch
-        force: true
-        directory: dist
-      env:
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - uses: actions/checkout@v3
+      - run: npm run build # Add whatever you need to build your package here
+      - uses: kategengler/put-built-npm-package-contents-on-branch@v1.0.0
+        with:
+          branch: ${{ github.head_ref || github.ref_name }}-dist
+          token: ${{ secrets.GITHUB_TOKEN }}
