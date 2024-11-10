@@ -31,4 +31,4 @@ jobs:
         git commit -m "Update dist folder"
         git push --force origin prod_main
       env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
