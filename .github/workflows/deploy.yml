@@ -17,8 +17,7 @@ jobs:
       run: npm install
 
     - name: Build project
-      run:
-        npm run build
+      run: npm run build
 
     - name: Deploy dist folder to prod_main branch
       run: |
@@ -31,4 +30,5 @@ jobs:
         git add .
         git commit -m "Update dist folder"
         git push --force origin prod_main
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
