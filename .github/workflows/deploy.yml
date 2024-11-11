@@ -28,14 +28,14 @@ jobs:
 
       - name: Bump version and create changelog
         run: npm run release
-        env:
+        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push changes and tags
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git subtree push --prefix dist --follow-tags origin ${{ github.ref }}
+          git subtree push --prefix dist --follow-tags origin prod-dist-master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
