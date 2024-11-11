@@ -63,3 +63,10 @@ jobs:
           draft: false
           prerelease: false
           target_commitish: dist-prod
+
+      - name: Upload release assets
+        run: |
+          zip -r dist.zip dist
+          gh release upload ${{ env.RELEASE_TAG }} dist.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
