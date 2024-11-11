@@ -111,10 +111,9 @@
                 <component :is="currentComponent" :filteredReservations="filteredReservations" :valorDia="valorDia" :taxaDeTransporte="taxaDeTransporte"
                     :taxaDeLimpeza="taxaDeLimpeza" :caucao="caucao" :seguro="seguro" @change="fetchData" />
             </div>
-            <div>
-                <h1>Welcome to My App</h1>
-                <p>Version: {{ version }}</p>
-            </div>
+        </div>
+        <div>
+            <p>Version: {{ version }}</p>
         </div>
     </div>
 </template>
