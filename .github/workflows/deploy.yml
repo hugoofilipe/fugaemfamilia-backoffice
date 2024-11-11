@@ -14,7 +14,10 @@ jobs:
       - uses: actions/checkout@v3
       - run: npm install
       - run: npm run build # Add whatever you need to build your package here
-      - uses: kategengler/put-built-npm-package-contents-on-branch@v1.0.0
-        with:
-          branch: test-dist
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push dist to gh-pages
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git subtree push --prefix dist origin gh-pages2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
