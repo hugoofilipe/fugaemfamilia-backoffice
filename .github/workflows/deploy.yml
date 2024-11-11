@@ -62,3 +62,4 @@ jobs:
           release_name: Release ${{ env.RELEASE_TAG }}
           draft: false
           prerelease: false
+          target_commitish: dist-prod
