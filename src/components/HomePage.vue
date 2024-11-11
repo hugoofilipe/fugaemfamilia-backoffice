@@ -111,6 +111,10 @@
                 <component :is="currentComponent" :filteredReservations="filteredReservations" :valorDia="valorDia" :taxaDeTransporte="taxaDeTransporte"
                     :taxaDeLimpeza="taxaDeLimpeza" :caucao="caucao" :seguro="seguro" @change="fetchData" />
             </div>
+            <div>
+                <h1>Welcome to My App</h1>
+                <p>Version: {{ version }}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -122,6 +126,7 @@ import RequestContact from './RequestContact.vue';
 import LeaveMessages from './LeaveMessages.vue';
 import axios from 'axios';
 import { markRaw } from 'vue';
+import { version } from '../../package.json';
 
 const apiUrl = process.env.VUE_APP_API_URL;
 
@@ -133,6 +138,7 @@ export default {
         const language = inject('language');
         return {
             language,
+            version,
             options: [],
             selectedOption: ['', ''], // Ensure this is initialized as an array
             reservations: [], // Ensure this is initialized as an array

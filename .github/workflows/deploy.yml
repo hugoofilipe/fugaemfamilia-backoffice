@@ -25,12 +25,20 @@ jobs:
       - name: Build project
         run: npm run buildProd
 
-      - name: Deploy dist folder to gh-pages3 branch
+      - name: Bump version and create changelog
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy dist folder to dist-prod branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add dist
           git commit -m "Deploy dist folder"
-          git push origin `git subtree split --prefix dist master`:gh-pages3 --force
+          git push origin `git subtree split --prefix dist master`:dist-prod --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
