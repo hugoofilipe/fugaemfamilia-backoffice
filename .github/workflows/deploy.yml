@@ -35,6 +35,11 @@ jobs:
       - name: Build project
         run: npm run build:prod
 
+      - name: Add dist folder to commit
+        run: |
+          git add dist
+          git commit -m "Add dist folder"
+          
       - name: Push changes and tags
         run: |
           git push --follow-tags origin master
