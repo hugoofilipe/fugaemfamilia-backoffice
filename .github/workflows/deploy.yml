@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build:prod
-
       - name: Bump version and create changelog
         id: bump_version
         run: |
@@ -34,6 +31,9 @@ jobs:
           echo "RELEASE_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build project
+        run: npm run build:prod
 
       - name: Push changes and tags
         run: |
