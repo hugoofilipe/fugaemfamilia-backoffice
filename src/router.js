@@ -31,6 +31,7 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
+  console.log('API URL:', apiUrl); // For debugging
   const token = localStorage.getItem('authToken');
   if (!token) {
     const secretKey = prompt('Enter the secret key:');
