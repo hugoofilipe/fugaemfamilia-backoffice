@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build:prod
+        run: npm run buildProd
 
       - name: Bump version and create changelog
         id: bump_version
