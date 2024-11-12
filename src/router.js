@@ -4,6 +4,9 @@ import FormPage from './components/FormPage.vue';
 import AdPage from './pages/AdsPage.vue';
 import axios from 'axios';
 
+const apiUrl = process.env.VUE_APP_API_URL;
+
+
 const routes = [
   {
     path: '/',
@@ -32,7 +35,7 @@ router.beforeEach(async (to, from, next) => {
   if (!token) {
     const secretKey = prompt('Enter the secret key:');
     try {
-      const response = await axios.post('http://localhost:5000/auth', { secretKey });
+      const response = await axios.post(`${apiUrl}/auth`, { secretKey });
       if (response.data.authenticated) {
         localStorage.setItem('authToken', response.data.token);
         next();
@@ -46,7 +49,7 @@ router.beforeEach(async (to, from, next) => {
     }
   } else {
     try {
-      const response = await axios.post('http://localhost:5000/validate', { token });
+      const response = await axios.post(`${apiUrl}/validate`, { token });
       if (response.data.valid) {
         next();
       } else {
