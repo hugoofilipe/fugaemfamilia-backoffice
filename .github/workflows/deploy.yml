@@ -40,15 +40,6 @@ jobs:
           git push --follow-tags origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Deploy only dist folder, from master to dist-prod branch
-        run: |
-          git checkout -b dist-prod
-          git add dist
-          git commit -m "Deploy ${{ env.RELEASE_TAG }}"
-          git push origin dist-prod
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Create GitHub Release
         id: create_release
@@ -60,7 +51,6 @@ jobs:
           release_name: Release ${{ env.RELEASE_TAG }}
           draft: false
           prerelease: false
-          target_commitish: dist-prod
 
       - name: Upload release assets
         run: |
