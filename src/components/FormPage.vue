@@ -27,7 +27,7 @@
     <div class="container_column">
         <!-- 1 column with 1/3 width -->
         <div class="column1">
-            <h2>Script ao telefone</h2>
+            <h2>Script ao telefone.</h2>
             <p>LVLL (Listen - Validate - Level - Lead)</p>
             <p>Tenho total disponibilidade para lhe mostrar a autocaravana.</p>
             <p>Trata-se de uma autocaravana familiar, portanto peço que tenham máximo cuidado com ela.</p>
