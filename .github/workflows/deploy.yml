@@ -41,17 +41,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy dist folder to dist-prod branch
+      - name: Deploy only dist folder, from master to dist-prod branch
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b dist-prod || git checkout dist-prod
+          git checkout -b dist-prod
           git add dist
-          git commit -m "Deploy dist folder"
-          git push origin `git subtree split --prefix dist master`:refs/heads/dist-prod --force
+          git commit -m "Deploy ${{ env.RELEASE_TAG }}"
+          git push origin dist-prod
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      
       - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
