@@ -7,35 +7,9 @@ on:
 
 jobs:
   release:
-    name: Build, Deploy and release
+    name: Build, bump version, create release and push changes
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build:prod
-
-      - name: Deploy dist folder to gh-pages branch
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist
-          git commit -m "Deploy dist folder"
-      
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
-
       - name: Checkout code
         uses: actions/checkout@v2
 
