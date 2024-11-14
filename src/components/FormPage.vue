@@ -28,14 +28,27 @@
         <!-- 1 column with 1/3 width -->
         <div class="column1">
             <h2>Script ao telefone.</h2>
+            
+            <h3>Tem perguntas?</h3>
             <p>LVLL (Listen - Validate - Level - Lead)</p>
+            
+            <h3>Serviço</h3>
+            <p>Estou sempre disponível para responder a todas as suas perguntas.</p>
             <p>Tenho total disponibilidade para lhe mostrar a autocaravana.</p>
+            <p>Deixo convosco: Via verde, duas bilhas de gás, conta premium no Park4Night</p>
+            
+            <h3>Cuidados</h3>
             <p>Trata-se de uma autocaravana familiar, portanto peço que tenham máximo cuidado com ela.</p>
             <p>Condução com um cuidado redobrado.</p>
             <p>Partilho na autocaravana um documento de regras e boas práticas durante a estadia.</p>
             <p>Obrigatório devolver a autocaravana no estado exatamente como foi entregue. (está descrito nas “regras de utilização e cuidados”)</p>
+            
+            <h3>Documentação</h3>
             <p>No dia, serão assinados os contratos, entregues as condições gerais e apólice de seguro.</p>
-            <p>Atenção, a reserva só se faz pagando um sinal (15%), devido á elevada procura, sugiro fortemente que o façam assim que decidam.</p>
+            <p>Documentação necessária: Cartão de cidadão, carta de condução, Nib para a devolver a caução, morada para o seguro. </p>
+
+            <h3>Reserva</h3>
+            <p>A reserva só se faz pagando um sinal (15%), chamo atenção que devido á elevada procura, sugiro fortemente que o façam assim que decidam.</p>
         </div>
 
         <!-- 2 column -->
