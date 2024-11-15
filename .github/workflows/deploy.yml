@@ -52,8 +52,8 @@ jobs:
           release_name: Release ${{ env.RELEASE_TAG }}
           draft: false
           prerelease: false
-        
-    - name: Clean release-branch
+
+      - name: Clean release-branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
