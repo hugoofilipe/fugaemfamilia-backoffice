@@ -53,36 +53,20 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Clean release-branch
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin
-          git checkout -b release-branch || git checkout release-branch
-          git rm -rf .
-          git clean -fd
-          git commit -m "Clean release-branch"
-          git push origin release-branch --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Update release-branch with dist content
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout master
-          git subtree split --prefix dist -b temp-dist
-          git checkout release-branch
-          git merge --allow-unrelated-histories -m "Add dist folder from master" temp-dist
-          git push origin release-branch --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Upload release assets
         run: |
-          git checkout master
           zip -r dist.zip dist
           gh release upload ${{ env.RELEASE_TAG }} dist.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: Deploy to cPanel
+        id: deploy
+        uses: pinkasey/cpanel-deploy-action@v1.0.0
+        with:
+          hostname: 'https://huna.pt'
+          repository_root: '/home/anaehugo/fugaemfamilia/frontoffice'
+          branch: master
+          cpanel_token: '${{ secrets.CPANEL_TOKEN }}'
+      - name: echo deploy-duration
+        run: echo "Deployment took ${{ steps.deploy.outputs.duration }} milliseconds"
