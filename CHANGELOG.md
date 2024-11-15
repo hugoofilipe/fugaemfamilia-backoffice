@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.1 (2024-11-15)
+
+
+### Bug Fixes
+
+* rename cpanel_user to cpanel_username in deployment workflow ([3e4c06c](https://github.com/hugoofilipe/fugaemfamilia-backoffice/commit/3e4c06c3cf686560c6b1adef93e1df8d60e99df7))
+
 ## 1.2.0 (2024-11-15)
 
 
