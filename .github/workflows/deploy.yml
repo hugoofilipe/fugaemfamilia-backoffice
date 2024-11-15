@@ -53,6 +53,19 @@ jobs:
           draft: false
           prerelease: false
         
+            - name: Clean release-branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin
+          git checkout -b release-branch || git checkout release-branch
+          git rm -rf .
+          git clean -fd
+          git commit -m "Clean release-branch"
+          git push origin release-branch --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Update release-branch with dist content
         run: |
           git config --global user.name "github-actions[bot]"
