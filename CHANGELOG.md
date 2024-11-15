@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.2 (2024-11-15)
+
+
+### Bug Fixes
+
+* update seguros options in HomePage component and remove cPanel deployment step ([049868b](https://github.com/hugoofilipe/fugaemfamilia-backoffice/commit/049868b2185b2bf8d466b2cf05e7af62cc8f044d))
+
 ### 1.2.1 (2024-11-15)
 
 
