@@ -80,6 +80,7 @@ jobs:
 
       - name: Upload release assets
         run: |
+          git checkout master
           zip -r dist.zip dist
           gh release upload ${{ env.RELEASE_TAG }} dist.zip
         env:
