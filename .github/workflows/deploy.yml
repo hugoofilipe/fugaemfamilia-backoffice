@@ -59,15 +59,3 @@ jobs:
           gh release upload ${{ env.RELEASE_TAG }} dist.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Deploy to cPanel
-        id: deploy
-        uses: pinkasey/cpanel-deploy-action@v1.0.0
-        with:
-          hostname: 'https://huna.pt'
-          repository_root: '/home/anaehugo/fugaemfamilia/frontoffice'
-          branch: master
-          cpanel_token: '${{ secrets.CPANEL_TOKEN }}'
-          cpanel_username: 'anaehugo'
-      - name: echo deploy-duration
-        run: echo "Deployment took ${{ steps.deploy.outputs.duration }} milliseconds"
