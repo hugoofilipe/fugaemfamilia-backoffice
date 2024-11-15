@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.2.0 (2024-11-15)
+
+
+### Features
+
+* add cPanel user to deployment workflow ([0abbbff](https://github.com/hugoofilipe/fugaemfamilia-backoffice/commit/0abbbffc54ee5e8bc1bd349895061d8f1997f8cc))
+
 ## 1.1.0 (2024-11-15)
 
 
