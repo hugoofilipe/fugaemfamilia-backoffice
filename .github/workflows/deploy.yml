@@ -53,7 +53,7 @@ jobs:
           draft: false
           prerelease: false
         
-      - name: Clean release-branch
+    - name: Clean release-branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -70,9 +70,13 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin
-          git checkout master && git pull
-          git subtree push --prefix dist origin release-branch
+          git checkout master
+          git subtree split --prefix dist -b temp-dist
+          git checkout release-branch
+          git merge --allow-unrelated-histories -m "Add dist folder from master" temp-dist
+          git push origin release-branch --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload release assets
         run: |
