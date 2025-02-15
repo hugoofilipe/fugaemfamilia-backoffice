@@ -59,6 +59,7 @@ router.beforeEach(async (to, from, next) => {
         next(false); // Cancel the navigation
       }
     } catch (error) {
+      localStorage.removeItem('authToken');
       alert('Error during validation');
       next(false); // Cancel the navigation
     }
