@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.3.0 (2025-02-15)
+
+
+### Features
+
+* update navigation and add calendar page ([10fd817](https://github.com/hugoofilipe/fugaemfamilia-backoffice/commit/10fd817bd4a86a7804440f478f0a14d428975dee))
+
 ### 1.2.4 (2025-02-15)
 
 
