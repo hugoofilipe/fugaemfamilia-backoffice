@@ -1,62 +1,63 @@
 <template>
-    <div class="container">
-        <div class="column">
-            <div>
-                <button @click="copyUrl">Share this link</button>
+    <div>
+        <div class="container">
+            <div class="column">
+                <div>
+                    <button @click="copyUrl">Share this link</button>
+                </div>
+                <div>
+                    <button @click="openForm">Pre-fill responses, then click "Get link"</button>
+                </div>
             </div>
-            <div>
-                <button @click="openForm">Pre-fill responses, then click "Get link"</button>
+            <div class="column">
+                <div>
+                    <button @click="openForm_onboarding_autocaravana">Formulario onboarding_autocaravana</button>
+                    <button @click="openForm_onboarding_autocaravana_spreadsheet">Formulario onboarding_autocaravana_spreadsheet</button>
+                </div>
+                <div>
+                    <button @click="openForm_onboarding_autocaravana_EN">Formulario onboarding_autocaravana_EN</button>
+                    <button @click="openForm_onboarding_autocaravana_EN_spreadsheet">Formulario onboarding_autocaravana_EN_spreadsheet</button>
+                </div>
+                <div>
+                    <button @click="openForm_onboarding_documents_autocaravana">Formulario onboarding_documents_autocaravana</button>
+                    <button @click="openForm_onboarding_documents_autocaravana_spreadsheet">Formulario onboarding_documents_autocaravana_spreadsheet</button>
+                </div>
             </div>
         </div>
-        <div class="column">
-            <div>
-                <button @click="openForm_onboarding_autocaravana">Formulario onboarding_autocaravana</button>
-                <button @click="openForm_onboarding_autocaravana_spreadsheet">Formulario onboarding_autocaravana_spreadsheet</button>
-            </div>
-            <div>
-                <button @click="openForm_onboarding_autocaravana_EN">Formulario onboarding_autocaravana_EN</button>
-                <button @click="openForm_onboarding_autocaravana_EN_spreadsheet">Formulario onboarding_autocaravana_EN_spreadsheet</button>
-            </div>
-            <div>
-                <button @click="openForm_onboarding_documents_autocaravana">Formulario onboarding_documents_autocaravana</button>
-                <button @click="openForm_onboarding_documents_autocaravana_spreadsheet">Formulario onboarding_documents_autocaravana_spreadsheet</button>
-            </div>
-        </div>
-        
-    </div>
-    <div class="container_column">
-        <!-- 1 column with 1/3 width -->
-        <div class="column1">
-            <h2>Script ao telefone.</h2>
-            
-            <h3>Tem perguntas?</h3>
-            <p>LVLL (Listen - Validate - Level - Lead)</p>
-            
-            <h3>Serviço</h3>
-            <p>Estou sempre disponível para responder a todas as suas perguntas.</p>
-            <p>Tenho total disponibilidade para lhe mostrar a autocaravana.</p>
-            <p>Deixo convosco: Via verde, duas bilhas de gás, conta premium no Park4Night</p>
-            
-            <h3>Cuidados</h3>
-            <p>Trata-se de uma autocaravana familiar, portanto peço que tenham máximo cuidado com ela.</p>
-            <p>Condução com um cuidado redobrado.</p>
-            <p>Partilho na autocaravana um documento de regras e boas práticas durante a estadia.</p>
-            <p>Obrigatório devolver a autocaravana no estado exatamente como foi entregue. (está descrito nas “regras de utilização e cuidados”)</p>
-            
-            <h3>Documentação</h3>
-            <p>No dia, serão assinados os contratos, entregues as condições gerais e apólice de seguro.</p>
-            <p>Documentação necessária: Cartão de cidadão, carta de condução, Nib para a devolver a caução, morada para o seguro. </p>
+        <div class="container_column">
+            <div class="column1">
+                <h2>Script ao telefone.</h2>
+                
+                <h3>Tem perguntas?</h3>
+                <p>LVLL (Listen - Validate - Level - Lead)</p>
+                
+                <h3>Serviço</h3>
+                <p>Estou sempre disponível para responder a todas as suas perguntas.</p>
+                <p>Tenho total disponibilidade para lhe mostrar a autocaravana.</p>
+                <p>Deixo convosco: Via verde, duas bilhas de gás, conta premium no Park4Night</p>
+                
+                <h3>Cuidados</h3>
+                <p>Trata-se de uma autocaravana familiar, portanto peço que tenham máximo cuidado com ela.</p>
+                <p>Condução com um cuidado redobrado.</p>
+                <p>Partilho na autocaravana um documento de regras e boas práticas durante a estadia.</p>
+                <p>Obrigatório devolver a autocaravana no estado exatamente como foi entregue. (está descrito nas “regras de utilização e cuidados”)</p>
+                
+                <h3>Documentação</h3>
+                <p>No dia, serão assinados os contratos, entregues as condições gerais e apólice de seguro.</p>
+                <p>Documentação necessária: Cartão de cidadão, carta de condução, Nib para a devolver a caução, morada para o seguro. </p>
 
-            <h3>Reserva</h3>
-            <p>A reserva só se faz pagando um sinal (15%), chamo atenção que devido á elevada procura, sugiro fortemente que o façam assim que decidam.</p>
-        </div>
-
-        <!-- 2 column -->
-        <div class="column2">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfuNkT_xxISDP79cbIhu5jPrcW--YF5M5hpq4oI9YBilaLTIw/viewform?embedded=true"
-                width="840" height="5826" frameborder="0" marginheight="0" marginwidth="0">Loading…
-            </iframe>
+                <h3>Reserva</h3>
+                <p>A reserva só se faz pagando um sinal (15%), chamo atenção que devido á elevada procura, sugiro fortemente que o façam assim que decidam.</p>
+                <br>
+                <br>
+                <iframe src="https://calendar.google.com/calendar/embed?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99%40group.calendar.google.com&ctz=Europe%2FLisbon" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="column2">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfuNkT_xxISDP79cbIhu5jPrcW--YF5M5hpq4oI9YBilaLTIw/viewform?embedded=true"
+                    width="840" height="5826" frameborder="0" marginheight="0" marginwidth="0">Loading…
+                </iframe>
+            </div>
         </div>
     </div>
 </template>

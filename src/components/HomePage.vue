@@ -105,6 +105,9 @@
                         </table>
                     </div>
                 </div>
+                <br>
+                <br>
+                <iframe src="https://calendar.google.com/calendar/embed?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99%40group.calendar.google.com&ctz=Europe%2FLisbon" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
             <div class="column2">
                 <!-- Render the current component based on the selected template with fileredReservations as a prop -->
