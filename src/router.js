@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './components/HomePage.vue';
 import FormPage from './components/FormPage.vue';
+import CalendarPage from './pages/CalendarPage.vue';
 import AdPage from './pages/AdsPage.vue';
 import axios from 'axios';
 
@@ -22,6 +23,12 @@ const routes = [
     path: '/ads',
     name: 'Ads',
     component: AdPage
+  },
+  {
+    path: '/calendar',
+    name: 'Calendar',
+    component: CalendarPage
+
   }
 ]
 
