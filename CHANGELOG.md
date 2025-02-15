@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.4 (2025-02-15)
+
+
+### Bug Fixes
+
+* **router:** clear auth token on validation error ([913e663](https://github.com/hugoofilipe/fugaemfamilia-backoffice/commit/913e66317903ef85f2d5647642487b46351713bd))
+
 ### 1.2.3 (2025-02-15)
 
 ### 1.2.2 (2024-11-15)
