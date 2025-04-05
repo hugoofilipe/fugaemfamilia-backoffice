@@ -50,7 +50,9 @@
                 <p>A reserva só se faz pagando um sinal (15%), chamo atenção que devido á elevada procura, sugiro fortemente que o façam assim que decidam.</p>
                 <br>
                 <br>
+                <h2>Calendário de Reservas</h2>
                 <iframe src="https://calendar.google.com/calendar/embed?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99%40group.calendar.google.com&ctz=Europe%2FLisbon" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <button @click="event_calendar">Event Calendar</button>
             </div>
             <div class="column2">
                 <iframe
@@ -99,7 +101,6 @@ export default {
                 // Remove the textarea from the document
                 document.body.removeChild(textarea);
 
-                alert('URL copied to clipboard');
             } catch (error) {
                 console.error('Error copying URL to clipboard: ', error);
                 alert('Error copying URL to clipboard');
@@ -126,6 +127,10 @@ export default {
         openForm_onboarding_documents_autocaravana_spreadsheet() {
             window.open('https://docs.google.com/spreadsheets/d/1DBmHaNkK8zxtwA62-gxNUPs_DF9OWVbr6tTQR5d_Os4', '_blank');
         },
+        event_calendar() {
+            window.open('https://calendar.google.com/calendar/u/0/r/eventedit?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99@group.calendar.google.com&text=Example+Google+Calendar+Event&details=More+help+see:+https://support.google.com/calendar/thread/81344786&dates=20250131T160000/20250231T170000&ctz=Lisbon', '_blank');
+        },
+
     },
 };
 </script>

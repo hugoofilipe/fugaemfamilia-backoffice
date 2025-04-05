@@ -3,6 +3,7 @@ import HomePage from './components/HomePage.vue';
 import FormPage from './components/FormPage.vue';
 import CalendarPage from './pages/CalendarPage.vue';
 import AdPage from './pages/AdsPage.vue';
+import gpsPage from './pages/gps.vue';
 import axios from 'axios';
 
 const apiUrl = process.env.VUE_APP_API_URL;
@@ -29,6 +30,11 @@ const routes = [
     name: 'Calendar',
     component: CalendarPage
 
+  },
+  {
+    path: '/gps',
+    name: 'gps',
+    component: gpsPage
   }
 ]
 

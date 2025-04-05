@@ -7,6 +7,7 @@
         <router-link to="/calendar"><h1>Calendário</h1></router-link>
         <router-link to="/form"><h1>Formulário</h1></router-link>
         <router-link to="/ads"><h1>Anúncios</h1></router-link>
+        <router-link to="/gps"><h1>GPS</h1></router-link>
       </div>
       <!-- on the left -->
       <div class="lang-button">

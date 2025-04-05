@@ -108,6 +108,7 @@
                 <br>
                 <br>
                 <iframe src="https://calendar.google.com/calendar/embed?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99%40group.calendar.google.com&ctz=Europe%2FLisbon" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <button @click="event_calendar">Event Calendar</button>
             </div>
             <div class="column2">
                 <!-- Render the current component based on the selected template with fileredReservations as a prop -->
@@ -232,6 +233,9 @@ export default {
         },
         fetchData() {
             this.fetchOptions(); // This is just an example call
+        },
+        event_calendar() {
+            window.open('https://calendar.google.com/calendar/u/0/r/eventedit?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99@group.calendar.google.com&text=Example+Google+Calendar+Event&details=More+help+see:+https://support.google.com/calendar/thread/81344786&dates=20250131T160000/20250231T170000&ctz=Lisbon', '_blank');
         },
     },
 };

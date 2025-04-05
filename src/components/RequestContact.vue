@@ -13,17 +13,33 @@
         </form>
 
         <div v-if="language == 'pt'">
-            <h2>Deixe o seu contacto</h2>
+            <h2>Olá</h2>
+            <div id="element-to-convert" class="content" ref="textToCopy1_3">
+                <div>Olá {{ name }} {{ greeting }}! 😊🙏</div>
+                <div>Mais uma vez, ficamos muito felizes em saber do teu/vosso interesse em alugar a nossa autocaravana para virem descobrir Portugal.</div>
+            </div>
+            <button @click="copyToClipboard('textToCopy1_3')">Copy to clipboard</button>
+        </div>
+
+        <div v-if="language == 'pt'">
+            <h2>Deixa me o teu contacto</h2>
             <div class="content"  ref="textToCopy1">
-                <div>{{ greeting }} {{ name }},</div>
-                <div>Deixe-me o seu contacto, ou ligue-me para o <a href="tel:+351913314803">913314803</a>.</div>
-                <div>Dessa forma consigo partilhar consigo as informações que precisa.</div>
-                <div>Se preferir, pode também responder ao questionário que está no link abaixo:</div>
-                <div><a href="https://forms.gle/4QwgJfuHq3sFiWTB6">https://forms.gle/4QwgJfuHq3sFiWTB6</a></div>
-                <div>Até já</div>
-                <div>Hugo Filipe</div> 
+                <div>Olá {{ name }}, {{ greeting }}! 😊🙏</div>
+                <div>Deixa-me o teu contacto, ou liga para o <a href="tel:+351913314803">913314803 📞</a>.</div>
+                <div>Desta forma consigo partilhar contigo as informações que precisas.</div>
             </div>
             <button @click="copyToClipboard('textToCopy1')">Copy to clipboard</button>
+        </div>
+
+        <div v-if="language == 'pt'">
+            <h2>Formulario de contacto</h2>
+            <div class="content" ref="textToCopy1_2">
+                <div>Se preferir, pode também responder ao questionário que está no link abaixo:</div>
+                <div><a href="https://forms.gle/4QwgJfuHq3sFiWTB6">https://forms.gle/4QwgJfuHq3sFiWTB6</a></div>
+                <div>Até já 🚐💫</div>
+                <div>Hugo Filipe</div> 
+            </div>
+            <button @click="copyToClipboard('textToCopy1_2')">Copy to clipboard</button>
         </div>
 
         <div v-if="language == 'en'">
@@ -43,11 +59,13 @@
         <div v-if="language == 'pt'">
             <h2>Sem datas disponíveis</h2>
             <div class="content" ref="textToCopy2">
-                <div>{{ greeting }} {{ name }},</div>
-                <div>Infelizmente já não temos essa data disponível. Deixe-me o seu nome e contacto, e eu trato de saber quem possa ter uma autocaravana disponível. </div>
-                <div>Caso venha a ter interesse noutra data, pode também responder ao questionário que está no link abaixo:</div>
+                <div>Olá {{ name }}, {{ greeting }} 😊🙏</div>
+                <div>Infelizmente não temos, para já, essa data disponível.</div>
+                <div>Entretanto vou tratar de saber, junto da minha rede de contactos, quem possa ter uma autocaravana disponível para essas datas.</div>
+                <div>Caso venhas a ter interesse noutra data diz-me, ou então podes preencher o formulário que está no link abaixo:</div>
                 <div><a href="https://forms.gle/4QwgJfuHq3sFiWTB6">https://forms.gle/4QwgJfuHq3sFiWTB6</a></div>
-                <div>Obrigado</div>
+                <div>Obrigado e até breve🚐💫</div>
+                <div>Fuga em Família</div>
             </div>
             <button @click="copyToClipboard('textToCopy2')">Copy to clipboard</button>
         </div>
@@ -94,11 +112,13 @@
             <div>
                 <div class="content" ref="textToCopy3">
                     <div>Envio um conjunto de fotos da autocaravana, para que possas ver como é por dentro e por fora.</div>
-                    <div>- [FOTOS] <a href="https://photos.app.goo.gl/ATqw2TmAAy42tQJG7">https://photos.app.goo.gl/ATqw2TmAAy42tQJG7</a></div>
-                    <div>Aproveito também para te deixar um video feito por um dos nossos clientes:</div>
-                    <div>- [VíDEO] <a href="https://youtu.be/palAGRCP1jc">https://youtu.be/palAGRCP1jc</a></div>
-                    <div>Entra em contacto comigo para reservar ou saber mais.</div>
-                    <div>Tel: 913314803</div>
+                    <div>-[🖼️ FOTOS] <a href="https://photos.app.goo.gl/ATqw2TmAAy42tQJG7">https://photos.app.goo.gl/ATqw2TmAAy42tQJG7</a></div>
+                    <div><br></div>
+                    <div>Aproveito também para te deixar um VIDEO, feito por um dos nossos clientes:</div>
+                    <div>-[📽️ VíDEO] <a href="https://youtu.be/palAGRCP1jc">https://youtu.be/palAGRCP1jc</a></div>
+                    <div><br></div>
+                    <div>Segue a nossa página de INSTAGRAM e onde vamos partilhando destinos e experiências fantásticas:</div>
+                    <div>-[📷 INSTAGRAM] <a href="https://www.instagram.com/fugaemfamilia/">https://www.instagram.com/fugaemfamilia/</a></div>
                 </div>
                 <button @click="copyToClipboard('textToCopy3')">Copy to clipboard</button>
             </div>
@@ -106,12 +126,12 @@
         <div v-if="language == 'pt'">
             <h2>Envio do formulário de documentos</h2>
             <div>
-                <div class="content" ref="textToCopy4">
+                <div class="content" ref="textToCopy6">
                     <div>{{ greeting }} {{ name }},</div>
                     <div>Peço que carregue mo formulário seguinte para que possa preencher com os documentos de que necessitamos:</div>
                     <div>- [FORMULÁRIO] <a href="https://forms.gle/UZhghd2xYRCtckdM8">https://forms.gle/UZhghd2xYRCtckdM8</a></div>
                 </div>
-                <button @click="copyToClipboard('textToCopy4')">Copy to clipboard</button>
+                <button @click="copyToClipboard('textToCopy6')">Copy to clipboard</button>
             </div>
         </div>
         <div v-if="language == 'pt'">
@@ -161,21 +181,21 @@ export default {
 
             if (hour < 12 && hour >= 6) {
                 if (this.language === 'pt') {
-                    return 'Bom dia';
+                    return 'bom dia';
                 } else {
-                    return 'Good morning';
+                    return 'good morning';
                 }
             } else if (hour < 19) {
                 if (this.language === 'pt') {
-                    return 'Boa tarde';
+                    return 'boa tarde';
                 } else {
-                    return 'Good afternoon';
+                    return 'good afternoon';
                 }
             } else {
                 if (this.language === 'pt') {
-                    return 'Boa noite';
+                    return 'boa noite';
                 } else {
-                    return 'Good night';
+                    return 'good night';
                 }
             }
         }
@@ -210,7 +230,6 @@ export default {
                         const successful = document.execCommand('copy');
                         const msg = successful ? 'successful' : 'unsuccessful';
                         console.log('Fallback: Copying text command was ' + msg);
-                        alert('Texto copiado para a área de transferência');
                     } catch (err) {
                         console.error('Fallback: Oops, unable to copy', err);
                     }
