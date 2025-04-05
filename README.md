@@ -27,7 +27,8 @@ npm run build
 
 
 ### Compiles and minifies for production
-Every time you want to deploy the frontoffice you just need to push to the master branch. The github actions will take care of the rest. See the file ".github/workflows/README.md" for more information.
+Every time you want to deploy the frontoffice you just need to push to the master branch. The github actions will take care of the rest. After that you just need to go to cpanel and pull the changes from the master branch to the server.
+See the file ".github/workflows/README.md" for more information.
 If you want to deploy it manually you can run the following command:
 ```
 npm run build:prod
@@ -49,3 +50,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - You need to add your local ip address to the allowed origins in the backend. 
     - Go to the backend folder and open the file "app.py"
     - Add your local ip address to the allowed origins in the CORS configuration
+    - check if port 5000 already in use by running the command "netstat -tuln | grep ":5000"
