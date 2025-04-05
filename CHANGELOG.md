@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.4.0 (2025-04-05)
+
+
+### Features
+
+* add GPS page and update navigation links ([766f6e8](https://github.com/hugoofilipe/fugaemfamilia-backoffice/commit/766f6e872e37dc6ffc93e3a4e31939fa65a33130))
+
 ## 1.3.0 (2025-02-15)
 
 
