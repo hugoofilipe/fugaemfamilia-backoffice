@@ -9,46 +9,14 @@
             <input type="text" id="iban" name="iban" v-model="iban" placeholder="IBAN">
         </form>
         <div>
-            <h2>Devolução da Caução</h2>
+            <h2>Esclarecimento sobre taxa de limpeza</h2>
             <div class="content" ref="textToCopy1">
-                <div>{{ greeting }} {{ name }},</div>
-                <div>Tranferência da caução concluída com sucesso. O valor de {{ amount }}€ foi transferido para a conta com o IBAN: {{ iban }}</div>
+                <div>Olá {{ name }} {{ greeting }} </div>
+                <div>Em relação à taxa de higienização de 30€, isto refere-se a um serviço contratado a empresa especializada sempre que existe um aluguer, que assegura uma limpeza técnica e sanitária da autocaravana. Este processo é essencial para que nós consiga-mos garantir um ambiente seguro, limpo e confortável.</div>
+                <div>No entanto, esta taxa não substitui a responsabilidade do locatário de devolver a autocaravana nas mesmas condições de limpeza e organização em que foi entregue.</div>
                 <div>Se tiveres alguma dúvida, entrem em contacto comigo.</div>
-                <div>Mais uma vez, espero que tenham gostado da vossa viagem. Até à próxima.</div>
-
-                <div>PS: Se tiveres um minuto, agradeço o teu feedback no link abaixo:</div>
-                <div><a href="https://g.page/r/Cf8SYfD6jTRmEB0/review">https://g.page/r/Cf8SYfD6jTRmEB0/review</a></div>
-                <div>Obrigado</div>
             </div>
             <button @click="copyToClipboard('textToCopy1')">Copy to clipboard</button>
-        </div>
-        <div>
-            <h2>Viagem a chegar ao fim</h2>
-            <div class="content" ref="textToCopy2">
-                <div>Olá {{ name }},</div>
-                <div>Esperamos encontrar-vos bem e a desfrutar ao máximo! 🙏🚐.</div>
-                <div> Agora que as férias estão quase a terminar, desejamos de coração que tenham sido fantásticas e cheias de bons momentos! 🚐✨</div>
-                <div>Ficaríamos muito felizes em saber como correu tudo e, se possível, adoraríamos que partilhassem a vossa experiência connosco:</div>    
-                <div>No Google: <a href="https://g.page/r/Cf8SYfD6jTRmEB0/review">https://g.page/r/Cf8SYfD6jTRmEB0/review</a></div>
-                <div>No Instagram: <a href="https://www.instagram.com/fugaemfamilia/">@fugaemfamilia</a></div>
-                <br>
-                <div>A vossa opinião é extremamente valiosa para nós e os vossos comentários fazem toda a diferença. 😊 </div>
-                <div>Muito obrigado pelo vosso tempo e carinho! 🙏</div>
-            </div>
-            <button @click="copyToClipboard('textToCopy2')">Copy to clipboard</button>
-        </div>
-        <div>
-            <h2>Verificação concluída</h2>
-            <div class="content" ref="textToCopy3">
-                <div>Olá {{ name }},</div>
-                <div>Espero que tenham tido uma boa viagem de regresso a casa.</div>
-                <div>Quero agradecer a vossa preferência e confiança.</div>
-                <div>Se tiverem alguma sugestão ou feedback, por favor, partilhem connosco.</div>
-                <div>Espero que tenham gostado da vossa viagem e que tenham boas recordações.</div>
-                <div>Até à próxima!</div>
-            </div>
-            <button @click="copyToClipboard('textToCopy3')">Copy to clipboard</button>
-            <button @click="exportToPDF">Export to PDF</button>
         </div>
     </div>
 </template>
@@ -56,7 +24,7 @@
 <script>
 import { inject } from 'vue';
 export default {
-    name: 'RequestContact',
+    name: 'FaqsMessages',
     data() {
         const language = inject('language');
         return {

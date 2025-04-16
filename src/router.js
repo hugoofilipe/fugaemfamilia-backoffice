@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import RoadMap from './pages/roadMap.vue';
 import HomePage from './components/HomePage.vue';
 import FormPage from './components/FormPage.vue';
 import CalendarPage from './pages/CalendarPage.vue';
@@ -10,6 +11,11 @@ const apiUrl = process.env.VUE_APP_API_URL;
 
 
 const routes = [
+  {
+    path: '/roadmap',
+    name: 'Roadmap',
+    component: RoadMap
+  },
   {
     path: '/',
     name: 'Home',

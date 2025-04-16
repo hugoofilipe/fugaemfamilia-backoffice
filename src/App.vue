@@ -3,6 +3,7 @@
     <div class="horizontal-header">
       <!-- on the right -->
       <div class="nav-links">
+        <router-link to="/roadmap"><h1>Road Map</h1></router-link>
         <router-link to="/"><h1>Reservas</h1></router-link>
         <router-link to="/calendar"><h1>Calendário</h1></router-link>
         <router-link to="/form"><h1>Formulário</h1></router-link>

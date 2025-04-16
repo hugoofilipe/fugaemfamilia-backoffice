@@ -45,6 +45,7 @@
                 <h3>Documentação</h3>
                 <p>No dia, serão assinados os contratos, entregues as condições gerais e apólice de seguro.</p>
                 <p>Documentação necessária: Cartão de cidadão, carta de condução, Nib para a devolver a caução, morada para o seguro. </p>
+                <p>O condutor tem de ter mais de 25 anos e 2 anos de carta de condução.</p>
 
                 <h3>Reserva</h3>
                 <p>A reserva só se faz pagando um sinal (15%), chamo atenção que devido á elevada procura, sugiro fortemente que o façam assim que decidam.</p>
@@ -52,7 +53,6 @@
                 <br>
                 <h2>Calendário de Reservas</h2>
                 <iframe src="https://calendar.google.com/calendar/embed?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99%40group.calendar.google.com&ctz=Europe%2FLisbon" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                <button @click="event_calendar">Event Calendar</button>
             </div>
             <div class="column2">
                 <iframe
@@ -128,7 +128,8 @@ export default {
             window.open('https://docs.google.com/spreadsheets/d/1DBmHaNkK8zxtwA62-gxNUPs_DF9OWVbr6tTQR5d_Os4', '_blank');
         },
         event_calendar() {
-            window.open('https://calendar.google.com/calendar/u/0/r/eventedit?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99@group.calendar.google.com&text=Example+Google+Calendar+Event&details=More+help+see:+https://support.google.com/calendar/thread/81344786&dates=20250131T160000/20250231T170000&ctz=Lisbon', '_blank');
+            const calendarUrl = `https://calendar.google.com/calendar/u/0/r/eventedit?src=52bf317a45c856aa26f8622b2a08fb0c407dfb7549336017e29d9299b19cda99@group.calendar.google.com&text=Example+Google+Calendar+Event&details=More+help+see:+https://support.google.com/calendar/thread/81344786&dates=${formattedDate}/${formattedDate}&ctz=Lisbon`;
+            window.open(calendarUrl, '_blank');
         },
 
     },
