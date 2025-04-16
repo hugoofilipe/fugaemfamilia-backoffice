@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.5.0 (2025-04-16)
+
+
+### Features
+
+* add roadmap page and update navigation; enhance leave messages and form page with additional information ([fe63d9d](https://github.com/hugoofilipe/fugaemfamilia-backoffice/commit/fe63d9db9085f8d8d2efd1e706aeebf9a5e0feb4))
+
 ## 1.4.0 (2025-04-05)
 
 
